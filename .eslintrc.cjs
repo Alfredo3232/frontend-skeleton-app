@@ -30,6 +30,7 @@ module.exports = {
     "vue/component-definition-name-casing": [
       "error",
       "kebab-case"
-    ]
+    ],
+    "no-trailing-spaces": ["error"]
   }
 };
