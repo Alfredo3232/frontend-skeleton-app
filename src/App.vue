@@ -1,10 +1,3 @@
 <template>
-  <header>
-    <div class="wrapper">
-      <p>Hello I am Working!!!</p>
-    </div>
-  </header>
+  <router-view />
 </template>
-
-<style scoped>
-</style>
