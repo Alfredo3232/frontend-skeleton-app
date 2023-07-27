@@ -1,7 +1,7 @@
 /* eslint-env node */
 module.exports = {
-  root: true,
-  "extends": [
+  root      : true,
+  "extends" : [
     "plugin:vue/vue3-recommended",
     "eslint:recommended"
   ],
@@ -9,40 +9,59 @@ module.exports = {
     ecmaVersion: "latest"
   },
   rules: {
-    // usually the var keyword has unexpected behavior, let and const are more consistent
-    "no-var": "error",
-    // if a variable isn't used it will warn you, not an error because the var might be used somewhere else
-    "no-unused-vars": "warn",
-    // leaving console logs is a bad practice and should only be used during development
-    "no-console": "warn",
-    // having duplicates is unnecessary and degrades performance
-    "no-duplicate-imports": "error",
-    "no-dupe-keys": "error",
-    // the debugger is only a testing tool and could break your application
-    "no-debugger": "error",
-    // I think that adding semi-colons is a good practice because it might help solve some issues and
-    // the interpreter doesn't have to guess where your line ended
-    "semi": [
+    "arrow-body-style": [
       "error",
-      "always"
+      "as-needed",
+      { "requireReturnForObjectLiteral": true }
     ],
-    // this is personal choice, and for the sake of consistency I made it an error
-    "quotes": [
+    "key-spacing": ["error", {
+      "align": {
+        "afterColon"  : true,
+        "beforeColon" : true,
+        "on"          : "colon"
+      }
+    }],
+    "no-console"           : "warn",
+    "no-debugger"          : "error",
+    "no-dupe-keys"         : "error",
+    "no-duplicate-imports" : "error",
+    "no-empty"             : "error",
+    "no-trailing-spaces"   : "error",
+    "no-unused-vars"       : "warn",
+    "no-var"               : "error",
+    "object-curly-newline" : ["error", {
+      "ExportDeclaration" : { "consistent": true, "minProperties": 4 },
+      "ImportDeclaration" : { "consistent": true, "minProperties": 4 },
+      "ObjectExpression"  : { "consistent": true, "minProperties": 4 },
+      "ObjectPattern"     : { "consistent": true, "minProperties": 4 }
+    }],
+    "prefer-destructuring" : ["error", { "object": true }],
+    "quotes"               : [
       "error",
       "double",
       {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true
+        "allowTemplateLiterals" : true,
+        "avoidEscape"           : true
       }
     ],
-    // leaving spaces is unnecessary, and for the sake of consistency I made it an error
-    "no-trailing-spaces": [
-      "error"
-    ],
-    // kebab casing is recommended by the vue team and should be used
-    "vue/component-definition-name-casing": [
+    "semi"         : ["error", "always"],
+    "comma-dangle" : ["error", {
+      "arrays"    : "never",
+      "objects"   : "never",
+      "imports"   : "never",
+      "exports"   : "never",
+      "functions" : "never"
+    }],
+    "eqeqeq"                               : ["error", "smart"],
+    "no-else-return"                       : "error",
+    "vue/component-definition-name-casing" : [
       "error",
       "kebab-case"
-    ]
+    ],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 3
+      }
+    }]
   }
 };
