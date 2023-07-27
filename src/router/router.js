@@ -10,9 +10,9 @@ let baseRoutes = [
 
 // router object
 let router = createRouter({
-  history: createWebHistory(),
-  routes: baseRoutes,
-  linkActiveClass: "current"
+  history         : createWebHistory(),
+  routes          : baseRoutes,
+  linkActiveClass : "current"
 });
 
 export default router;
