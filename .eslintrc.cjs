@@ -11,8 +11,7 @@ module.exports = {
   rules: {
     "arrow-body-style": [
       "error",
-      "as-needed",
-      { "requireReturnForObjectLiteral": true }
+      "as-needed"
     ],
     "key-spacing": ["error", {
       "align": {
@@ -30,13 +29,12 @@ module.exports = {
     "no-unused-vars"       : "warn",
     "no-var"               : "error",
     "object-curly-newline" : ["error", {
-      "ExportDeclaration" : { "consistent": true, "minProperties": 4 },
-      "ImportDeclaration" : { "consistent": true, "minProperties": 4 },
-      "ObjectExpression"  : { "consistent": true, "minProperties": 4 },
-      "ObjectPattern"     : { "consistent": true, "minProperties": 4 }
+      "ExportDeclaration" : { "consistent": true, "minProperties": 3 },
+      "ImportDeclaration" : { "consistent": true, "minProperties": 3 },
+      "ObjectExpression"  : { "consistent": true, "minProperties": 3 },
+      "ObjectPattern"     : { "consistent": true, "minProperties": 3 }
     }],
-    "prefer-destructuring" : ["error", { "object": true }],
-    "quotes"               : [
+    "quotes": [
       "error",
       "double",
       {
@@ -44,14 +42,14 @@ module.exports = {
         "avoidEscape"           : true
       }
     ],
-    "semi"         : ["error", "always"],
-    "comma-dangle" : ["error", {
+    "comma-dangle": ["error", {
       "arrays"    : "never",
       "objects"   : "never",
       "imports"   : "never",
       "exports"   : "never",
       "functions" : "never"
     }],
+    "semi"                                 : ["error", "always"],
     "eqeqeq"                               : ["error", "smart"],
     "no-else-return"                       : "error",
     "vue/component-definition-name-casing" : [
